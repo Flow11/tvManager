@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.032" errors="0" skipped="0" tests="1" name="com.mycompany.firstproject.AppTest">
+  <properties>
+    <property name="java.vendor" value="Sun Microsystems Inc."/>
+    <property name="localRepository" value="C:\Users\Flow\.m2\repository"/>
+    <property name="env.VS90COMNTOOLS" value="D:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\Tools\"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Server Compiler"/>
+    <property name="env.PROMPT" value="$P$G"/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="env.FP_NO_HOST_CHECK" value="NO"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_23\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_23\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_23\jre\classes"/>
+    <property name="env.XNAGSShared" value="C:\Program Files (x86)\Common Files\Microsoft Shared\XNA\"/>
+    <property name="env.COMPUTERNAME" value="FLOW-PC"/>
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files"/>
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.runtime.version" value="1.6.0_23-b05"/>
+    <property name="env.HOMEPATH" value="\Users\Flow"/>
+    <property name="user.name" value="Flow"/>
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled"/>
+    <property name="user.language" value="fr"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_23\jre\bin"/>
+    <property name="java.version" value="1.6.0_23"/>
+    <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 15 Stepping 6, GenuineIntel"/>
+    <property name="user.timezone" value="Europe/Paris"/>
+    <property name="env.TEMP" value="C:\Users\Flow\AppData\Local\Temp"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="http.nonProxyHosts" value="localhost|127.0.0.1|Flow-PC"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_23\jre\lib\endorsed"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="env.HOMEDRIVE" value="C:"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="user.country" value="FR"/>
+    <property name="jna.boot.library.path" value="C:\Users\Flow\.netbeans\6.9\var\cache\jna"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_23\jre"/>
+    <property name="env.PSModulePath" value="C:\Windows\system32\WindowsPowerShell\v1.0\Modules\"/>
+    <property name="env.APPDATA" value="C:\Users\Flow\AppData\Roaming"/>
+    <property name="env.PUBLIC" value="C:\Users\Public"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="env.ComSpec" value="C:\Windows\system32\cmd.exe"/>
+    <property name="env.OS" value="Windows_NT"/>
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files"/>
+    <property name="os.version" value="6.1"/>
+    <property name="netbeans.system_http_proxy" value="DIRECT"/>
+    <property name="env.ProgramW6432" value="C:\Program Files"/>
+    <property name="https.nonProxyHosts" value="localhost|127.0.0.1|Flow-PC"/>
+    <property name="env.CYGWIN" value="tty"/>
+    <property name="sun.awt.keepWorkingSetOnMinimize" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.version" value="19.0-b09"/>
+    <property name="env.USERPROFILE" value="C:\Users\Flow"/>
+    <property name="user.variant" value=""/>
+    <property name="env.JAVA_HOME" value="C:\Program Files\Java\jdk1.6.0_23"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="env.TMP" value="C:\Users\Flow\AppData\Local\Temp"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="useJavaUtilZip" value="true"/>
+    <property name="user.home" value="C:\Users\Flow"/>
+    <property name="env.ProgramData" value="C:\ProgramData"/>
+    <property name="env.SESSIONNAME" value="Console"/>
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="env.CLASSPATH" value="C:\Users\Flow\Desktop\apache-tomcat-6.0.29\lib\servlet-api.jar"/>
+    <property name="apple.laf.useScreenMenuBar" value="true"/>
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser"/>
+    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="env.NUMBER_OF_PROCESSORS" value="2"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_23\jre\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Mercurial\;C:\Users\Flow\Documents\android-sdk-windows;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jre6\bin\javaw.exe;C:\Program Files\Java\jdk1.6.0_23\bin;C:\Program Files\TortoiseSVN\bin;C:\Ruby192\bin"/>
+    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.class.path" value="C:\Program Files\NetBeans 6.9.1\platform\lib\boot.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\org-openide-modules.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\org-openide-util-lookup.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\org-openide-util.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_ar_SA.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_ca.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_cs.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_de.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_es.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_fr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_gl_ES.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_in_ID.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_it.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_ko.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_nl_NL.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_pl.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_pt_PT.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_ro.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_ru.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_sq.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_sv.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_tr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\boot_zh_TW.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_ar_SA.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_ca.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_cs.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_de.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_es.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_fr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_gl_ES.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_in_ID.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_it.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_ko.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_nl_NL.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_pl.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_pt_PT.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_ro.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_ru.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_sq.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_sv.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_tr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-modules_zh_TW.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_ca.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_cs.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_de.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_es.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_fr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_gl_ES.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_in_ID.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_it.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_ko.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_nl_NL.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_pl.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_ro.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_ru.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_sv.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util-lookup_tr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_ar_SA.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_ca.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_cs.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_de.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_es.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_fr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_gl_ES.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_in_ID.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_it.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_ko.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_nl_NL.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_pl.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_pt_PT.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_ro.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_ru.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_sq.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_sv.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_tr.jar;C:\Program Files\NetBeans 6.9.1\platform\lib\locale\org-openide-util_zh_TW.jar;C:\Program Files\Java\jdk1.6.0_23\lib\dt.jar;C:\Program Files\Java\jdk1.6.0_23\lib\tools.jar"/>
+    <property name="sun.java2d.noddraw" value="true"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="jdk.home" value="C:\Program Files\Java\jdk1.6.0_23"/>
+    <property name="env.windir" value="C:\Windows"/>
+    <property name="env.LOGONSERVER" value="\\FLOW-PC"/>
+    <property name="org.openide.specification.version" value="6.2"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="env.ProgramFiles" value="C:\Program Files"/>
+    <property name="surefire.test.class.path" value="C:\Users\Flow\Desktop\J2ee\JSF_Security\target\test-classes;C:\Users\Flow\Desktop\J2ee\JSF_Security\target\classes;C:\Users\Flow\.m2\repository\javax\javaee-api\6.0\javaee-api-6.0.jar;C:\Users\Flow\.m2\repository\org\eclipse\persistence\javax.persistence\2.0.0\javax.persistence-2.0.0.jar;C:\Users\Flow\.m2\repository\org\eclipse\persistence\eclipselink\2.0.1\eclipselink-2.0.1.jar;C:\Users\Flow\.m2\repository\org\apache\derby\derbyclient\10.5.3.0_1\derbyclient-10.5.3.0_1.jar;C:\Users\Flow\.m2\repository\org\apache\derby\derby\10.5.3.0_1\derby-10.5.3.0_1.jar;C:\Users\Flow\.m2\repository\junit\junit\4.8.2\junit-4.8.2.jar;"/>
+    <property name="java.io.tmpdir" value="C:\Users\Flow\AppData\Local\Temp\"/>
+    <property name="env.PROCESSOR_REVISION" value="0f06"/>
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files"/>
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="env.SystemRoot" value="C:\Windows"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_23\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="user.dir" value="C:\Users\Flow\Desktop\J2ee\JSF_Security"/>
+    <property name="env.LOCALAPPDATA" value="C:\Users\Flow\AppData\Local"/>
+    <property name="line.separator" value="
+"/>
+    <property name="apple.awt.graphics.UseQuartz" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+    <property name="env.Path" value="C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;c:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Mercurial\;C:\Users\Flow\Documents\android-sdk-windows;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files\Java\jre6\bin\javaw.exe;C:\Program Files\Java\jdk1.6.0_23\bin;C:\Program Files\TortoiseSVN\bin;C:\Ruby192\bin"/>
+    <property name="basedir" value="C:\Users\Flow\Desktop\J2ee\JSF_Security"/>
+    <property name="maven.mode.standalone" value="true"/>
+    <property name="env.USERNAME" value="Flow"/>
+    <property name="env.SystemDrive" value="C:"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="netbeans.execution" value="true"/>
+    <property name="env.XNAGSv3" value="C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v3.0\"/>
+    <property name="env.USERDOMAIN" value="Flow-PC"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="env.PROCESSOR_LEVEL" value="6"/>
+  </properties>
+  <testcase time="0.002" classname="com.mycompany.firstproject.AppTest" name="testApp"/>
+</testsuite>

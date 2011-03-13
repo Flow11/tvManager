@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+    <title>Editer une série</title>
+</h:head>
+<h:body>
+    <ul>
+        <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
+        <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
+    </ul>
+    <hr/>
+    <h1>Editer une série</h1>
+    <hr/>
+    <h:form>
+        <table border="0">
+            <tr>
+                <td><h:outputLabel value="Titre : "/></td>
+                <td><h:inputText value="#{SerieController.serie.titre}" required="true"/>
+                </td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Description :"/></td>
+                <td><h:inputText value="#{SerieController.serie.description}"/></td>
+            </tr>
+            <tr>
+                <td><h:outputLabel value="Note : "/></td>
+                <td><h:inputText value="#{SerieController.serie.note}"/></td>
+            </tr>
+        </table>
+
+        <h:commandButton value="Sauver" rendered="#{securityController.connectedUserIsAdmin}" action="#{SerieController.doSave}"/>
+
+    </h:form>
+
+    <h:form>
+            <h:commandButton value="Cancel" action="listSeries.xhtml"/>
+        </h:form>
+    <hr/>
+
+</h:body>
+</html>

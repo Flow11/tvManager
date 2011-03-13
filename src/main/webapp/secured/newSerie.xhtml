@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Créér une nouvelle série</title>
+    </h:head>
+    <h:body>
+        <ul>
+            <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
+            <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
+        </ul>
+        <hr/>
+        <h1>Créér une nouvelle série</h1>
+        <hr/>
+        <h:form>
+            <h:panelGrid columns="3">
+
+                <h:outputLabel value="Titre :"/>
+                <h:inputText id="title" value="#{SerieController.serie.title}"/>
+                <h:message for="title"/>
+
+                <h:outputLabel value="Description :"/>
+                <h:inputText value="#{SerieController.serie.description}"/>
+                <h:message for="description"/>
+
+                <h:outputLabel value="Note : "/>
+                <h:inputText value="#{SerieController.serie.note}"/>
+                <h:message for="note"/>
+
+            </h:panelGrid>
+
+            <h:commandButton value="Créér une série" rendered="#{securityController.connectedUserIsAdmin}" action="#{SerieController.doCreate}"/>
+
+        </h:form>
+
+        <h:form>
+            <h:commandButton value="Cancel" action="listSeries.xhtml"/>
+        </h:form>
+        <hr/>
+    </h:body>
+</html>
