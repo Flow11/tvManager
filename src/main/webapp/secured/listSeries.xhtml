@@ -13,7 +13,7 @@
         </script>
 
 
-        <title>Liste des séries</title>
+        <title>Liste des series</title>
     </h:head>
     <h:body>
         <ul>
@@ -21,10 +21,10 @@
             <li><h:form><h:commandLink action="#{SecurityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
         </ul>
         <hr/>
-        <h1>Liste des séries</h1>
+        <h1>Liste des series</h1>
         <hr/>
         <h:form>
-            <h:dataTable value="#{SerieController.serieList}" var="serie" border="1">
+            <h:dataTable value="#{serieController.serieList}" var="serie" border="1">
                 <h:column>
                     <h:selectBooleanCheckbox value="#{serie.selected}"/>
                 </h:column>
@@ -33,14 +33,14 @@
                     <f:facet name="header">
                         <h:outputText value="Title"/>
                     </f:facet>
-                    <h:commandLink action="#{SerieController.doEdit}" value="#{serie.title}" />
+                    <h:commandLink action="#{serieController.doEdit}" value="#{serie.title}" />
                 </h:column>
 
             </h:dataTable>
 
-            <h:commandLink action="#{SerieController.doNew}" rendered="#{SecurityController.connectedUserIsAdmin}">Créér une nouvelle série </h:commandLink>
+            <h:commandLink action="#{serieController.doNew}" rendered="#{SecurityController.connectedUserIsAdmin}">Creer une nouvelle serie </h:commandLink>
             <h:outputText value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
-            <h:commandLink action="#{SerieController.doDelete}" rendered="#{SecurityController.connectedUserIsAdmin}" onclick="return confirmDelete();">Delete selection</h:commandLink>
+            <h:commandLink action="#{serieController.doDelete}" rendered="#{securityController.connectedUserIsAdmin}" onclick="return confirmDelete();">Delete selection</h:commandLink>
         </h:form>
         <hr/>
     </h:body>

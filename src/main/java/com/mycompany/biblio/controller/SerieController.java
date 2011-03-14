@@ -14,7 +14,7 @@ import javax.faces.model.ListDataModel;
 
 @ManagedBean
 @SessionScoped
-public class SerieController {
+public class serieController {
 
     // ======================================
     // =             Attributes             =
@@ -67,7 +67,7 @@ public class SerieController {
 
     public String doSave() {
         SerieEJB.update(serie);
-        return "listSeires.xhtml";
+        return "listSeries.xhtml";
     }
     // ======================================
     // =          Getters & Setters         =

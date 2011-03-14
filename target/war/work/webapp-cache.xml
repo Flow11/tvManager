@@ -16,9 +16,8 @@
           <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/com/mycompany/biblio/business/SerieEJB.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/controller/SecurityController.class</string>
-          <string>WEB-INF/classes/com/mycompany/biblio/controller/SerieController.class</string>
+          <string>WEB-INF/classes/com/mycompany/biblio/controller/serieController.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/model/Episode.class</string>
-          <string>WEB-INF/classes/com/mycompany/biblio/model/Livre.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/model/Saison.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/model/Serie.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/model/Utilisateur.class</string>

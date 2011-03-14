@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-    <title>Editer une série</title>
+    <title>Editer une serie</title>
 </h:head>
 <h:body>
     <ul>
@@ -11,26 +11,26 @@
         <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
     </ul>
     <hr/>
-    <h1>Editer une série</h1>
+    <h1>Editer une serie</h1>
     <hr/>
     <h:form>
         <table border="0">
             <tr>
                 <td><h:outputLabel value="Titre : "/></td>
-                <td><h:inputText value="#{SerieController.serie.titre}" required="true"/>
+                <td><h:inputText value="#{serieController.serie.titre}" required="true"/>
                 </td>
             </tr>
             <tr>
                 <td><h:outputLabel value="Description :"/></td>
-                <td><h:inputText value="#{SerieController.serie.description}"/></td>
+                <td><h:inputText value="#{serieController.serie.description}"/></td>
             </tr>
             <tr>
                 <td><h:outputLabel value="Note : "/></td>
-                <td><h:inputText value="#{SerieController.serie.note}"/></td>
+                <td><h:inputText value="#{serieController.serie.note}"/></td>
             </tr>
         </table>
 
-        <h:commandButton value="Sauver" rendered="#{securityController.connectedUserIsAdmin}" action="#{SerieController.doSave}"/>
+        <h:commandButton value="Sauver" rendered="#{securityController.connectedUserIsAdmin}" action="#{serieController.doSave}"/>
 
     </h:form>
 

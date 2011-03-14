@@ -18,7 +18,7 @@ import javax.persistence.NamedQuery;
  */
 
 @Entity
-@NamedQuery(name = Serie.FIND_ALL, query = "SELECT * FROM Serie")
+@NamedQuery(name = Serie.FIND_ALL, query = "SELECT s FROM Serie s")
 
 public class Serie {
     public final static String FIND_ALL = "Serie.findAll";
