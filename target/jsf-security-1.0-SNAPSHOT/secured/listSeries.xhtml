@@ -38,7 +38,7 @@
 
             </h:dataTable>
 
-            <h:commandLink action="#{serieController.doNew}" rendered="#{SecurityController.connectedUserIsAdmin}">Creer une nouvelle serie </h:commandLink>
+            <h:commandLink action="#{serieController.doNew}" rendered="#{securityController.connectedUserIsAdmin}">Creer une nouvelle serie </h:commandLink>
             <h:outputText value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
             <h:commandLink action="#{serieController.doDelete}" rendered="#{securityController.connectedUserIsAdmin}" onclick="return confirmDelete();">Delete selection</h:commandLink>
         </h:form>

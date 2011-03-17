@@ -5,12 +5,15 @@
 
 package com.mycompany.biblio.model;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -20,9 +23,8 @@ import javax.persistence.NamedQuery;
 @Entity
 @NamedQuery(name = Serie.FIND_ALL, query = "SELECT s FROM Serie s")
 
-public class Serie {
+public class Serie implements Serializable {
     public final static String FIND_ALL = "Serie.findAll";
-
     @Id
     @GeneratedValue
     private long id;
@@ -33,7 +35,8 @@ public class Serie {
     private String img;
     private float note;
     private Boolean selected;
-
+    @OneToMany(mappedBy="serie")
+    private List<Saison> saisons;
     
     public Serie() {
     }
