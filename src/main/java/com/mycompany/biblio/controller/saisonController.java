@@ -1,10 +1,10 @@
 package com.mycompany.biblio.controller;
 
-import com.mycompany.biblio.business.SerieEJB;
+import com.mycompany.biblio.business.SaisonEJB;
+import com.mycompany.biblio.model.Saison;
 import com.mycompany.biblio.model.Serie;
 import javax.faces.bean.ManagedBean;
 import javax.ejb.EJB;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import javax.faces.bean.SessionScoped;
@@ -14,22 +14,22 @@ import javax.faces.model.ListDataModel;
 
 @ManagedBean
 @SessionScoped
-public class serieController {
+public class saisonController {
 
     // ======================================
     // =             Attributes             =
     // ======================================
 
     @EJB
-    private SerieEJB SerieEJB ;
+    private SaisonEJB SaisonEJB ;
 
     private HtmlDataTable dataTable;
 
-    private Serie serie = new Serie();
-    private ListDataModel serieList;
-    
+    private Saison saison = new Saison();
+    private ListDataModel saisonList;
+
     private void updateSerieList() {
-        serieList = new ListDataModel(SerieEJB.findAll());
+        saisonList = new ListDataModel(SaisonEJB.findAll());
     }
 
     // ======================================
@@ -37,23 +37,23 @@ public class serieController {
     // ======================================
 
     public String doNew() {
-        serie = new Serie();
+        saison = new Saison();
         return "newSerie.xhtml";
     }
 
     public String doCreate() {
-        SerieEJB.create(serie);
-        return "listSeries.xhtml";
-    }
-    
-    public String doDelete() {
-        List<Serie> series = (List<Serie>)serieList.getWrappedData();
-        SerieEJB.delete(onlySelected(series));
+        SaisonEJB.create(saison);
         return "listSeries.xhtml";
     }
 
-    private List<Serie> onlySelected(List<Serie> list) {
-        for (Iterator<Serie> it = list.iterator(); it.hasNext(); ) {
+    public String doDelete() {
+        List<Saison> saisons = (List<Saison>)saisonList.getWrappedData();
+        SaisonEJB.delete(onlySelected(saisons));
+        return "listSeries.xhtml";
+    }
+
+    private List<Saison> onlySelected(List<Saison> list) {
+        for (Iterator<Saison> it = list.iterator(); it.hasNext(); ) {
             if (!(it.next().isSelected()))
                 it.remove();
         }
@@ -61,38 +61,38 @@ public class serieController {
     }
 
     public String doEdit() {
-        serie = (Serie)serieList.getRowData();
+        saison = (Saison)saisonList.getRowData();
         return "editSerie.xhtml";
     }
 
     public String doAddSaison() {
+        saison = (Saison)saisonList.getRowData();
         return "newSaisonEpisode.xhtml";
     }
 
-
     public String doSave() {
-        SerieEJB.update(serie);
+        SaisonEJB.update(saison);
         return "listSeries.xhtml";
     }
     // ======================================
     // =          Getters & Setters         =
     // ======================================
 
-    public Serie getSerie() {
-        return serie;
+    public Saison getSerie() {
+        return saison;
     }
 
     public void setSerie(Serie serie) {
-        this.serie = serie;
+        this.saison = saison;
     }
 
     public ListDataModel getSerieList() {
         updateSerieList();
-        return serieList;
+        return saisonList;
     }
 
-    public void setSerieList(ListDataModel serieList) {
-        this.serieList = serieList;
+    public void setSerieList(ListDataModel saisonList) {
+        this.saisonList = saisonList;
     }
 
     public HtmlDataTable getDataTable() {
@@ -103,5 +103,5 @@ public class serieController {
         this.dataTable = dataTable;
     }
 
-    
+
 }

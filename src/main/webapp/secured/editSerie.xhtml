@@ -31,7 +31,7 @@
         </table>
 
         <h:commandButton value="Sauver" rendered="#{securityController.connectedUserIsAdmin}" action="#{serieController.doSave}"/>
-
+        <h:commandLink action="#{serieController.doAddSaison}" value="Gestion des saison et episodes" />
     </h:form>
 
     <h:form>

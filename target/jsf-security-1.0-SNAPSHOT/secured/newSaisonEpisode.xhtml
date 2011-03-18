@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Gerer les saison et les episodes de la serie</title>
+    </h:head>
+    <h:body>
+        <ul>
+            <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
+            <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
+        </ul>
+        <hr/>
+        <h1>Ajoutez une nouvelle saison</h1>
+        <hr/>
+        <h:form>
+            <h:panelGrid columns="3">
+
+                <h:outputLabel value="Numero :"/>
+                <h:inputText id="numero" value=""/>
+                <h:message for="numero"/>
+
+            </h:panelGrid>
+
+            <h:commandButton value="Ajoutez la saison" rendered="#{securityController.connectedUserIsAdmin}" action="#{saisonController.doCreate}"/>
+
+        </h:form>
+
+        <h:form>
+            <h:commandButton value="Cancel" action="listSeries.xhtml"/>
+        </h:form>
+        <hr/>
+    </h:body>
+</html>

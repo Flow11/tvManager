@@ -9,12 +9,15 @@
           <string>login_error.xhtml</string>
           <string>secured/editSerie.xhtml</string>
           <string>secured/listSeries.xhtml</string>
+          <string>secured/newSaisonEpisode.xhtml</string>
           <string>secured/newSerie.xhtml</string>
           <string>sessionExpired.xhtml</string>
           <string>WEB-INF/faces-config.xml</string>
           <string>WEB-INF/sun-web.xml</string>
           <string>WEB-INF/web.xml</string>
+          <string>WEB-INF/classes/com/mycompany/biblio/business/SaisonEJB.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/business/SerieEJB.class</string>
+          <string>WEB-INF/classes/com/mycompany/biblio/controller/saisonController.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/controller/SecurityController.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/controller/serieController.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/model/Episode.class</string>

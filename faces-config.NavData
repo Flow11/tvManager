@@ -3,13 +3,13 @@
     <Scope Scope="Faces Configuration Only"/>
     <Scope Scope="Project">
         <Node id="secured/editSerie.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="login.faces" x="150" y="300" zoom="true"/>
         <Node id="default.htm" x="150" y="600" zoom="true"/>
         <Node id="login.xhtml" x="650" y="150" zoom="true"/>
-        <Node id="login.faces" x="150" y="300" zoom="true"/>
         <Node id="secured/listSeries.xhtml" x="650" y="300" zoom="true"/>
         <Node id="*" x="150" y="150" zoom="true"/>
-        <Node id="login_error.xhtml" x="400" y="150" zoom="true"/>
         <Node id="secured/newSerie.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="login_error.xhtml" x="400" y="150" zoom="true"/>
         <Node id="loginError.faces" x="400" y="450" zoom="true"/>
         <Node id="sessionExpired.xhtml" x="900" y="150" zoom="true"/>
     </Scope>
