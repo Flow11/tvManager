@@ -15,11 +15,9 @@
         <hr/>
         <h:form>
             <h:panelGrid columns="3">
-
                 <h:outputLabel value="Numero :"/>
                 <h:inputText id="numero" value=""/>
-                <h:message for="numero"/>
-
+                <input type="hidden" name="myhiddenvalue" value="#{serieController.serie.id}" />
             </h:panelGrid>
 
             <h:commandButton value="Ajoutez la saison" rendered="#{securityController.connectedUserIsAdmin}" action="#{saisonController.doCreate}"/>
