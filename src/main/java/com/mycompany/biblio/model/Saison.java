@@ -29,10 +29,6 @@ public class Saison implements Serializable {
     private Long id;
     @Column(nullable = false)
     private int numero;
-    private Boolean selected;
-    @ManyToOne
-    @JoinColumn(name="SERIE_ID")
-    private Serie serie;
 
     /**
      * @return the id
@@ -62,29 +58,7 @@ public class Saison implements Serializable {
         this.numero = numero;
     }
 
-    /**
-     * @return the serie
-     */
-    public Serie getSerie() {
-        return serie;
-    }
 
-    /**
-     * @param serie the serie to set
-     */
-    public void setSerie(Serie serie) {
-        this.serie = serie;
-    }
 
-    public Boolean isSelected() {
-        return selected;
-    }
 
-    public Boolean getSelected() {
-        return selected;
-    }
-
-    public void setSelected(Boolean selected) {
-        this.selected = selected;
-    }
 }

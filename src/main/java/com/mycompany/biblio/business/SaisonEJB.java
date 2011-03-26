@@ -1,6 +1,7 @@
 package com.mycompany.biblio.business;
 
 import com.mycompany.biblio.model.Saison;
+import com.mycompany.biblio.model.Serie;
 import java.util.List;
 import javax.persistence.*;
 import javax.ejb.Stateless;
@@ -23,8 +24,11 @@ public class SaisonEJB {
         return query.getResultList();
     }
 
-    public Saison create(Saison saison) {
+    public Saison create(Saison saison,Long id) {
+        Serie serie = em.find(Serie.class, id);
+        serie.addSaison(saison);
         em.persist(saison);
+        em.persist(serie);
         return saison;
     }
 

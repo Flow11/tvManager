@@ -35,7 +35,7 @@ public class Serie implements Serializable {
     private String img;
     private float note;
     private Boolean selected;
-    @OneToMany(mappedBy="serie")
+    @OneToMany
     private List<Saison> saisons;
     
     public Serie() {
@@ -131,10 +131,11 @@ public class Serie implements Serializable {
         this.selected = selected;
     }
 
-    /**
-     * @return the saisons
-     */
     public List<Saison> getSaisons() {
         return saisons;
+    }
+
+    public void addSaison(Saison saison) {
+        saisons.add(saison);
     }
 }

@@ -9,7 +9,9 @@ import java.util.Iterator;
 import java.util.List;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.html.HtmlDataTable;
+import javax.faces.context.FacesContext;
 import javax.faces.model.ListDataModel;
+import javax.servlet.http.HttpServletRequest;
 
 
 @ManagedBean
@@ -28,7 +30,7 @@ public class saisonController {
     private Saison saison = new Saison();
     private ListDataModel saisonList;
 
-    private void updateSerieList() {
+    private void updateSaisonList() {
         saisonList = new ListDataModel(SaisonEJB.findAll());
     }
 
@@ -42,22 +44,12 @@ public class saisonController {
     }
 
     public String doCreate() {
-        SaisonEJB.create(saison);
-        return "listSeries.xhtml";
-    }
+        FacesContext context = FacesContext.getCurrentInstance();
+        HttpServletRequest myRequest = (HttpServletRequest)context.getExternalContext().getRequest();
+        Long id = Long.parseLong(myRequest.getParameter("serie_id"));
 
-    public String doDelete() {
-        List<Saison> saisons = (List<Saison>)saisonList.getWrappedData();
-        SaisonEJB.delete(onlySelected(saisons));
+        SaisonEJB.create(saison,id);
         return "listSeries.xhtml";
-    }
-
-    private List<Saison> onlySelected(List<Saison> list) {
-        for (Iterator<Saison> it = list.iterator(); it.hasNext(); ) {
-            if (!(it.next().isSelected()))
-                it.remove();
-        }
-        return list;
     }
 
     public String doEdit() {
@@ -78,20 +70,20 @@ public class saisonController {
     // =          Getters & Setters         =
     // ======================================
 
-    public Saison getSerie() {
+    public Saison getSaison() {
         return saison;
     }
 
-    public void setSerie(Serie serie) {
+    public void setSaison(Saison saison) {
         this.saison = saison;
     }
 
-    public ListDataModel getSerieList() {
-        updateSerieList();
+    public ListDataModel getSaisonList() {
+        updateSaisonList();
         return saisonList;
     }
 
-    public void setSerieList(ListDataModel saisonList) {
+    public void setSaisonList(ListDataModel saisonList) {
         this.saisonList = saisonList;
     }
 
