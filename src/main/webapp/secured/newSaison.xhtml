@@ -12,13 +12,33 @@
             <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
         </ul>
         <hr/>
+        <h1> Liste des saisons </h1>
+        <h:form>
+        <h:dataTable value="#{serieController.serie.saisons}" var="saison" border="1">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="numero"/>
+                </f:facet>
+                 <h:outputText value="#{saison.numero}"/>
+                 <h:commandLink action="#{saisonController.doAddEpisode}" value=" Ajoutez des episodes">
+                     <f:setPropertyActionListener value="#{saison.id}" target="#{saisonController.saison.id}" />
+                 </h:commandLink>
+                 <h:dataTable value="#{saison.getEpidodes()}" var="episode" border="0">
+                    <h:column>
+                        <h:outputText value="Episode numero ##{episode.numero} "/>
+                        <h:outputText value="#{episode.title}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:column>
+        </h:dataTable>
+        </h:form>
+        <hr/>
         <h1>Ajoutez une nouvelle saison</h1>
         <hr/>
         <h:form>
             <h:panelGrid columns="3">
                 <h:outputLabel value="Numero :"/>
                 <h:inputText id="numero" value="#{saisonController.saison.numero}"/>
-                <input type="hidden" name="myhiddenvalue" value="#{serieController.serie.id}" />
             </h:panelGrid>
 
             <h:commandButton value="Ajoutez la saison" rendered="#{securityController.connectedUserIsAdmin}" action="#{saisonController.doCreate}">

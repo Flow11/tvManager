@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Gerer les saison et les episodes de la serie</title>
+    </h:head>
+    <h:body>
+        <ul>
+            <h:form>
+                <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
+                <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
+            </h:form>
+        </ul>
+        <hr/>
+
+        <h1>Ajoutez un nouvel episode</h1>
+        <hr/>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="Titre :"/>
+                <h:inputText id="title" value="#{episodeController.episode.title}"/>
+                <br />
+                <h:outputLabel value="Description :"/>
+                <h:inputText id="description" value="#{episodeController.episode.description}"/>
+                <br />
+                <h:outputLabel value="Numero :"/>
+                <h:inputText id="numero" value="#{episodeController.episode.numero}"/>
+                <br />
+                <h:outputLabel value="Date de Diffusion :"/>
+                <h:inputText id="dateDiffusion" value="#{episodeController.episode.dateDiffusion}">
+                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+                </h:inputText>
+            </h:panelGrid>
+
+            <h:commandButton value="Ajoutez l episode" rendered="#{securityController.connectedUserIsAdmin}" action="#{episodeController.doCreate}">
+                <f:param name="saison_id" value="#{saisonController.saison.id}"/>
+            </h:commandButton>
+
+        </h:form>
+
+        <h:form>
+            <h:commandButton value="Cancel" action="newSaison.xhtml"/>
+        </h:form>
+        <hr/>
+    </h:body>
+</html>

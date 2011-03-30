@@ -1,7 +1,7 @@
 package com.mycompany.biblio.controller;
 
-import com.mycompany.biblio.business.SaisonEJB;
-import com.mycompany.biblio.model.Saison;
+import com.mycompany.biblio.business.EpisodeEJB;
+import com.mycompany.biblio.model.Episode;
 import com.mycompany.biblio.model.Serie;
 import javax.faces.bean.ManagedBean;
 import javax.ejb.EJB;
@@ -16,22 +16,22 @@ import javax.servlet.http.HttpServletRequest;
 
 @ManagedBean
 @SessionScoped
-public class saisonController {
+public class episodeController {
 
     // ======================================
     // =             Attributes             =
     // ======================================
 
     @EJB
-    private SaisonEJB SaisonEJB ;
+    private EpisodeEJB EpisodeEJB ;
 
     private HtmlDataTable dataTable;
 
-    private Saison saison = new Saison();
-    private ListDataModel saisonList;
+    private Episode episode = new Episode();
+    private ListDataModel episodeList;
 
-    private void updateSaisonList() {
-        saisonList = new ListDataModel(SaisonEJB.findAll());
+    private void updateEpisodeList() {
+        episodeList = new ListDataModel(EpisodeEJB.findAll());
     }
 
     // ======================================
@@ -39,56 +39,52 @@ public class saisonController {
     // ======================================
 
     public String doNew() {
-        saison = new Saison();
+        episode = new Episode();
         return "newSerie.xhtml";
     }
 
     public String doCreate() {
         FacesContext context = FacesContext.getCurrentInstance();
         HttpServletRequest myRequest = (HttpServletRequest)context.getExternalContext().getRequest();
-        Long id = Long.parseLong(myRequest.getParameter("serie_id"));
+        Long id = Long.parseLong(myRequest.getParameter("saison_id"));
 
-        SaisonEJB.create(saison,id);
+        EpisodeEJB.create(episode,id);
         return "listSeries.xhtml";
     }
 
     public String doEdit() {
-        saison = (Saison)saisonList.getRowData();
-        return "editSaison.xhtml";
-    }
-
-    public String doAddSaison() {
-        saison = (Saison)saisonList.getRowData();
-        return "newEpisode.xhtml";
-    }
-
-    public String doSave() {
-        SaisonEJB.update(saison);
-        return "listSeries.xhtml";
+        episode = (Episode)episodeList.getRowData();
+        return "editEpisode.xhtml";
     }
 
     public String doAddEpisode() {
-        return "newEpisode";
+        episode = (Episode)episodeList.getRowData();
+        return "newEpisodeEpisode.xhtml";
+    }
+
+    public String doSave() {
+        EpisodeEJB.update(episode);
+        return "listSeries.xhtml";
     }
     // ======================================
     // =          Getters & Setters         =
     // ======================================
 
-    public Saison getSaison() {
-        return saison;
+    public Episode getEpisode() {
+        return episode;
     }
 
-    public void setSaison(Saison saison) {
-        this.saison = saison;
+    public void setEpisode(Episode episode) {
+        this.episode = episode;
     }
 
-    public ListDataModel getSaisonList() {
-        updateSaisonList();
-        return saisonList;
+    public ListDataModel getEpisodeList() {
+        updateEpisodeList();
+        return episodeList;
     }
 
-    public void setSaisonList(ListDataModel saisonList) {
-        this.saisonList = saisonList;
+    public void setEpisodeList(ListDataModel episodeList) {
+        this.episodeList = episodeList;
     }
 
     public HtmlDataTable getDataTable() {

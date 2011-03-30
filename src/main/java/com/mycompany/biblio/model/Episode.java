@@ -4,6 +4,7 @@
  */
 
 package com.mycompany.biblio.model;
+import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,8 +20,10 @@ import javax.persistence.Transient;
  * @author root
  */
 @Entity
+@NamedQuery(name = Episode.FIND_ALL, query = "SELECT e FROM Episode e")
 
-public class Episode {
+public class Episode implements Serializable {
+    public final static String FIND_ALL = "Episode.findAll";
     @Id
     @GeneratedValue
     private int id;
@@ -31,4 +34,60 @@ public class Episode {
     private int numero;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date dateDiffusion;
+
+    /**
+     * @return the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @param title the title to set
+     */
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    /**
+     * @return the description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * @param description the description to set
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    /**
+     * @return the numero
+     */
+    public int getNumero() {
+        return numero;
+    }
+
+    /**
+     * @param numero the numero to set
+     */
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+    /**
+     * @return the dateDiffusion
+     */
+    public Date getDateDiffusion() {
+        return dateDiffusion;
+    }
+
+    /**
+     * @param dateDiffusion the dateDiffusion to set
+     */
+    public void setDateDiffusion(Date dateDiffusion) {
+        this.dateDiffusion = dateDiffusion;
+    }
 }

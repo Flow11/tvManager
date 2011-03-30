@@ -6,6 +6,7 @@
 package com.mycompany.biblio.model;
 
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,6 +14,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 
 /**
@@ -29,6 +31,8 @@ public class Saison implements Serializable {
     private Long id;
     @Column(nullable = false)
     private int numero;
+    @OneToMany
+    private List<Episode> episodes;
 
     /**
      * @return the id
@@ -58,7 +62,22 @@ public class Saison implements Serializable {
         this.numero = numero;
     }
 
+    /**
+     * @return the epidodes
+     */
+    public List<Episode> getEpidodes() {
+        return episodes;
+    }
 
+    /**
+     * @param epidodes the epidodes to set
+     */
+    public void setEpidodes(List<Episode> epidodes) {
+        this.episodes = epidodes;
+    }
 
+    public void addEpisode(Episode episode) {
+        episodes.add(episode);
+    }
 
 }

@@ -66,7 +66,7 @@ public class serieController {
     }
 
     public String doAddSaison() {
-        return "newSaisonEpisode";
+        return "newSaison";
     }
 
 

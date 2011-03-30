@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.024" errors="0" skipped="0" tests="1" name="com.mycompany.firstproject.AppTest">
+<testsuite failures="0" time="0.022" errors="0" skipped="0" tests="1" name="com.mycompany.firstproject.AppTest">
   <properties>
     <property name="java.vendor" value="Sun Microsystems Inc."/>
     <property name="localRepository" value="C:\Users\Flow\.m2\repository"/>

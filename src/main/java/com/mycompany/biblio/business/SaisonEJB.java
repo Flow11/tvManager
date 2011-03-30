@@ -15,6 +15,7 @@ public class SaisonEJB {
     // ======================================
     @PersistenceContext(unitName = "jsfExamplePU")
     private EntityManager em;
+    private int currentSaisonId;
 
     // ======================================
     // =           Public Methods           =
@@ -22,6 +23,10 @@ public class SaisonEJB {
     public List<Saison> findAll() {
         Query query = em.createNamedQuery(Saison.FIND_ALL);
         return query.getResultList();
+    }
+
+    public Saison find(Long id){
+        return em.find(Saison.class,id);
     }
 
     public Saison create(Saison saison,Long id) {
