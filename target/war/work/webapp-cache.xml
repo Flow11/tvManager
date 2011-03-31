@@ -29,6 +29,7 @@
           <string>WEB-INF/classes/com/mycompany/biblio/model/Utilisateur.class</string>
           <string>WEB-INF/classes/com/mycompany/biblio/util/FacesUtil.class</string>
           <string>WEB-INF/classes/META-INF/persistence.xml</string>
+          <string>WEB-INF/lib/primefaces-2.2.jar</string>
         </pathsSet>
       </path-set>
     </entry>

@@ -33,7 +33,7 @@ public class Serie implements Serializable {
     @Column(length = 2000)
     private String description;
     private String img;
-    private float note;
+    private double note;
     private Boolean selected;
     @OneToMany
     private List<Saison> saisons;
@@ -42,7 +42,7 @@ public class Serie implements Serializable {
         
     }
 
-    public Serie(String title, String description,String img, float note, Boolean selected) {
+    public Serie(String title, String description,String img, double note, Boolean selected) {
         this.title = title;
         this.description = description;
         this.img = img;
@@ -108,14 +108,14 @@ public class Serie implements Serializable {
     /**
      * @return the note
      */
-    public float getNote() {
+    public double getNote() {
         return note;
     }
 
     /**
      * @param note the note to set
      */
-    public void setNote(float note) {
+    public void setNote(double note) {
         this.note = note;
     }
 

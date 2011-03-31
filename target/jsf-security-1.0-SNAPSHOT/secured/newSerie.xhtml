@@ -1,7 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
     <h:head>
         <title>Creer une nouvelle serie</title>
     </h:head>
@@ -25,7 +26,7 @@
                 <h:message for="description"/>
 
                 <h:outputLabel value="Note : "/>
-                <h:inputText value="#{serieController.serie.note}"/>
+                <p:rating value="#{serieController.serie.note}" />
                 <h:message for="note"/>
 
             </h:panelGrid>

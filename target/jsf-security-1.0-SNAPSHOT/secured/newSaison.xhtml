@@ -12,21 +12,26 @@
             <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
         </ul>
         <hr/>
-        <h1> Liste des saisons </h1>
+        <h1> Liste des saisons et episodes</h1>
         <h:form>
         <h:dataTable value="#{serieController.serie.saisons}" var="saison" border="1">
             <h:column>
                 <f:facet name="header">
-                    <h:outputText value="numero"/>
+                    <h:outputText value="Liste"/>
                 </f:facet>
-                 <h:outputText value="#{saison.numero}"/>
+                <h:outputText value="Saison ##{saison.numero}"/>
                  <h:commandLink action="#{saisonController.doAddEpisode}" value=" Ajoutez des episodes">
                      <f:setPropertyActionListener value="#{saison.id}" target="#{saisonController.saison.id}" />
                  </h:commandLink>
                  <h:dataTable value="#{saison.getEpidodes()}" var="episode" border="0">
                     <h:column>
-                        <h:outputText value="Episode numero ##{episode.numero} "/>
-                        <h:outputText value="#{episode.title}"/>
+                        <ul><li>
+                        <h:outputText value="Episode ##{episode.numero} "/>
+                        <h:outputText value="#{episode.title} "/>
+                        <h:outputText value="#{episode.dateDiffusion}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                        </li></ul>
                     </h:column>
                 </h:dataTable>
             </h:column>

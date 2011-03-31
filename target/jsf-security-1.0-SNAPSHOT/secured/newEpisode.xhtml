@@ -2,7 +2,8 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.prime.com.tr/ui">
     <h:head>
         <title>Gerer les saison et les episodes de la serie</title>
     </h:head>
@@ -29,10 +30,21 @@
                 <h:inputText id="numero" value="#{episodeController.episode.numero}"/>
                 <br />
                 <h:outputLabel value="Date de Diffusion :"/>
-                <h:inputText id="dateDiffusion" value="#{episodeController.episode.dateDiffusion}">
-                    <f:convertDateTime pattern="dd/MM/yyyy"/>
-                </h:inputText>
+                <p:calendar value="#{episodeController.episode.dateDiffusion}" showOn="button" />
             </h:panelGrid>
+
+            <p:dialog header="Selected Dates" widgetVar="dialog"
+            showEffect="fold" hideEffect="fold"
+            height="150">  
+                <h:panelGrid id="display" columns="2" cellpadding="5">
+
+                    <h:outputText value="Popup Button Date: " />
+                    <h:outputText value="#{episodeController.episode.dateDiffusion}">
+                        <f:convertDateTime pattern="dd/MM/yyyy"/>
+                    </h:outputText>
+                </h:panelGrid>
+
+             </p:dialog>
 
             <h:commandButton value="Ajoutez l episode" rendered="#{securityController.connectedUserIsAdmin}" action="#{episodeController.doCreate}">
                 <f:param name="saison_id" value="#{saisonController.saison.id}"/>

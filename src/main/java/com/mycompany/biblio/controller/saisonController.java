@@ -49,7 +49,7 @@ public class saisonController {
         Long id = Long.parseLong(myRequest.getParameter("serie_id"));
 
         SaisonEJB.create(saison,id);
-        return "listSeries.xhtml";
+        return "newSaison.xhtml";
     }
 
     public String doEdit() {
