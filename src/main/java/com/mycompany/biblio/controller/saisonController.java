@@ -30,6 +30,8 @@ public class saisonController {
     private Saison saison = new Saison();
     private ListDataModel saisonList;
 
+    private int currentSaisonId;
+
     private void updateSaisonList() {
         saisonList = new ListDataModel(SaisonEJB.findAll());
     }
@@ -49,7 +51,21 @@ public class saisonController {
         Long id = Long.parseLong(myRequest.getParameter("serie_id"));
 
         SaisonEJB.create(saison,id);
-        return "newSaison.xhtml";
+        return "listSeries.faces";
+    }
+
+    public String doDelete() {
+        List<Saison> saisons = (List<Saison>)saisonList.getWrappedData();
+        SaisonEJB.delete(onlySelected(saisons));
+        return "listSeries.xhtml";
+    }
+
+    private List<Saison> onlySelected(List<Saison> list) {
+        for (Iterator<Saison> it = list.iterator(); it.hasNext(); ) {
+            if (!(it.next().isSelected()))
+                it.remove();
+        }
+        return list;
     }
 
     public String doEdit() {
@@ -97,6 +113,20 @@ public class saisonController {
 
     public void setDataTable(HtmlDataTable dataTable) {
         this.dataTable = dataTable;
+    }
+
+    /**
+     * @return the currentSaisonId
+     */
+    public int getCurrentSaisonId() {
+        return currentSaisonId;
+    }
+
+    /**
+     * @param currentSaisonId the currentSaisonId to set
+     */
+    public void setCurrentSaisonId(int currentSaisonId) {
+        this.currentSaisonId = currentSaisonId;
     }
 
 

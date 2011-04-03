@@ -2,46 +2,55 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-    <h:head>
-        <script type="text/javascript" language="javascript">
-            function confirmDelete(){
-                if (confirm("Voulez-vous supprimmer le(s) serie(s) s&eacute;lectionn&eacute;(s) ?"))
-                    return true;
-                return false;
-            }
-        </script>
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+	<ui:composition template="../template/index.xhtml">
 
+            <ui:define name="sideBar">
+                 <h:form>
+                    <h:dataTable value="#{episodeController.nextEp}" var="episode" border="1">
+                        <h:column>
+                            <h:outputText value="#{episode.title} "/>
+                        </h:column>
+                        <h:column>
+                            <h:outputText value="#{episode.dateDiffusion}">
+                                <f:convertDateTime pattern="dd/MM/yyyy"/>
+                            </h:outputText>
+                        </h:column>
+                    </h:dataTable>
+                 </h:form>
+            </ui:define>
 
-        <title>Liste des series</title>
-    </h:head>
-    <h:body>
-        <ul>
-            <li><h:outputText value="Bienvenue #{SecurityController.connectedUserid}"/></li>
-            <li><h:form><h:commandLink action="#{SecurityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
-        </ul>
-        <hr/>
-        <h1>Liste des series</h1>
-        <hr/>
-        <h:form>
-            <h:dataTable value="#{serieController.serieList}" var="serie" border="1">
-                <h:column>
-                    <h:selectBooleanCheckbox value="#{serie.selected}"/>
-                </h:column>
+            <ui:define name="contenu">
+                <ul>
+                    <li><h:outputText value="Bienvenue #{SecurityController.connectedUserid}"/></li>
+                    <li><h:form><h:commandLink action="#{SecurityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
+                </ul>
+                <hr/>
+                <br />
+                <h1>Liste des series</h1>
+                <br />
+                <hr/>
+                <h:form>
+                    <h:dataTable value="#{serieController.serieList}" var="serie" border="1">
+                        <h:column>
+                            <h:selectBooleanCheckbox value="#{serie.selected}"/>
+                        </h:column>
 
-                <h:column>
-                    <f:facet name="header">
-                        <h:outputText value="Title"/>
-                    </f:facet>
-                    <h:commandLink action="#{serieController.doEdit}" value="#{serie.title}" />
-                </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Title"/>
+                            </f:facet>
+                            <h:commandLink action="#{serieController.doEdit}" value="#{serie.title}" />
+                        </h:column>
 
-            </h:dataTable>
-
-            <h:commandLink action="#{serieController.doNew}" rendered="#{securityController.connectedUserIsAdmin}">Creer une nouvelle serie </h:commandLink>
-            <h:outputText value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
-            <h:commandLink action="#{serieController.doDelete}" rendered="#{securityController.connectedUserIsAdmin}" onclick="return confirmDelete();">Delete selection</h:commandLink>
-        </h:form>
-        <hr/>
-    </h:body>
+                    </h:dataTable>
+                    <br />
+                    <h:commandLink action="#{serieController.doNew}" rendered="#{securityController.connectedUserIsAdmin}">Creer une nouvelle serie </h:commandLink>
+                    <h:outputText value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/>
+                    <h:commandLink action="#{serieController.doDelete}" rendered="#{securityController.connectedUserIsAdmin}" onclick="return confirmDelete();">Delete selection</h:commandLink>
+                </h:form>
+                <hr/>
+            </ui:define>
+    </ui:composition>
 </html>

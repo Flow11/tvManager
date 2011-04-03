@@ -29,11 +29,15 @@ public class episodeController {
 
     private Episode episode = new Episode();
     private ListDataModel episodeList;
+    private ListDataModel nextEp;
 
     private void updateEpisodeList() {
         episodeList = new ListDataModel(EpisodeEJB.findAll());
     }
 
+    private void updateNextEpisodeList() {
+        nextEp = new ListDataModel(EpisodeEJB.findNextEp());
+    }
     // ======================================
     // =           Public Methods           =
     // ======================================
@@ -49,7 +53,7 @@ public class episodeController {
         Long id = Long.parseLong(myRequest.getParameter("saison_id"));
 
         EpisodeEJB.create(episode,id);
-        return "newSaison.xhtml";
+        return "listSeries.faces";
     }
 
     public String doEdit() {
@@ -85,6 +89,15 @@ public class episodeController {
 
     public void setEpisodeList(ListDataModel episodeList) {
         this.episodeList = episodeList;
+    }
+
+    public ListDataModel getNextEp() {
+        updateNextEpisodeList();
+        return nextEp;
+    }
+
+    public void setNextEp(ListDataModel nextEp) {
+        this.nextEp = nextEp;
     }
 
     public HtmlDataTable getDataTable() {

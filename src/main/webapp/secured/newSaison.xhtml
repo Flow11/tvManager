@@ -2,17 +2,35 @@
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-    <h:head>
-        <title>Gerer les saison et les episodes de la serie</title>
-    </h:head>
-    <h:body>
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="../template/index.xhtml">
+
+        <ui:define name="sideBar">
+             <h:form>
+                <h:dataTable value="#{episodeController.nextEp}" var="episode" border="1">
+                    <h:column>
+                        <h:outputText value="#{episode.title} "/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{episode.dateDiffusion}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                    </h:column>
+                </h:dataTable>
+             </h:form>
+        </ui:define>
+
+
+        <ui:define name="contenu">
         <ul>
             <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
             <li><h:form><h:commandLink action="#{securityController.logout}" value="Se d&eacute;connecter"/></h:form></li>
         </ul>
         <hr/>
+        <br />
         <h1> Liste des saisons et episodes</h1>
+        <br />
         <h:form>
         <h:dataTable value="#{serieController.serie.saisons}" var="saison" border="1">
             <h:column>
@@ -21,7 +39,7 @@
                 </f:facet>
                 <h:outputText value="Saison ##{saison.numero}"/>
                  <h:commandLink action="#{saisonController.doAddEpisode}" value=" Ajoutez des episodes">
-                     <f:setPropertyActionListener value="#{saison.id}" target="#{saisonController.saison.id}" />
+                     <f:setPropertyActionListener value="#{saison.id}" target="#{saisonController.currentSaisonId}" />
                  </h:commandLink>
                  <h:dataTable value="#{saison.getEpidodes()}" var="episode" border="0">
                     <h:column>
@@ -37,23 +55,25 @@
             </h:column>
         </h:dataTable>
         </h:form>
+        <br />
         <hr/>
         <h1>Ajoutez une nouvelle saison</h1>
         <hr/>
+        <br />
         <h:form>
             <h:panelGrid columns="3">
                 <h:outputLabel value="Numero :"/>
                 <h:inputText id="numero" value="#{saisonController.saison.numero}"/>
             </h:panelGrid>
-
             <h:commandButton value="Ajoutez la saison" rendered="#{securityController.connectedUserIsAdmin}" action="#{saisonController.doCreate}">
                  <f:param name="serie_id" value="#{serieController.serie.id}"/>
             </h:commandButton>
         </h:form>
-
+        <br />
         <h:form>
             <h:commandButton value="Cancel" action="listSeries.xhtml"/>
         </h:form>
         <hr/>
-    </h:body>
+        </ui:define>
+    </ui:composition>
 </html>

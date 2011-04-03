@@ -7,12 +7,34 @@
           <string>default.htm</string>
           <string>login.xhtml</string>
           <string>login_error.xhtml</string>
+          <string>ressource/images/bg_footer.gif</string>
+          <string>ressource/images/bg_general.gif</string>
+          <string>ressource/images/bg_header.jpg</string>
+          <string>ressource/images/bg_icon_lines.gif</string>
+          <string>ressource/images/bg_menu.gif</string>
+          <string>ressource/images/bg_menu_starter.gif</string>
+          <string>ressource/images/bg_page.gif</string>
+          <string>ressource/images/bg_search_field.gif</string>
+          <string>ressource/images/check.gif</string>
+          <string>ressource/images/corners_bottom.gif</string>
+          <string>ressource/images/corners_top.gif</string>
+          <string>ressource/images/download.gif</string>
+          <string>ressource/images/icon_contact.gif</string>
+          <string>ressource/images/icon_home.gif</string>
+          <string>ressource/images/icon_sitemap.gif</string>
+          <string>ressource/images/logo.gif</string>
+          <string>ressource/images/newsletter.jpg</string>
+          <string>ressource/images/testi_skuola.jpg</string>
+          <string>ressource/images/testi_tmm.jpg</string>
+          <string>ressource/images/Thumbs.db</string>
+          <string>ressource/style.css</string>
           <string>secured/editSerie.xhtml</string>
           <string>secured/listSeries.xhtml</string>
           <string>secured/newEpisode.xhtml</string>
           <string>secured/newSaison.xhtml</string>
           <string>secured/newSerie.xhtml</string>
           <string>sessionExpired.xhtml</string>
+          <string>template/index.xhtml</string>
           <string>WEB-INF/faces-config.xml</string>
           <string>WEB-INF/sun-web.xml</string>
           <string>WEB-INF/web.xml</string>

@@ -3,11 +3,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:p="http://primefaces.prime.com.tr/ui">
-    <h:head>
-        <title>Gerer les saison et les episodes de la serie</title>
-    </h:head>
-    <h:body>
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <ui:composition template="../template/index.xhtml">
+
+        <ui:define name="sideBar">
+             <h:form>
+                <h:dataTable value="#{episodeController.nextEp}" var="episode" border="1">
+                    <h:column>
+                        <h:outputText value="#{episode.title} "/>
+                    </h:column>
+                    <h:column>
+                        <h:outputText value="#{episode.dateDiffusion}">
+                            <f:convertDateTime pattern="dd/MM/yyyy"/>
+                        </h:outputText>
+                    </h:column>
+                </h:dataTable>
+             </h:form>
+        </ui:define>
+
+
+        <ui:define name="contenu">
         <ul>
             <h:form>
                 <li><h:outputText value="Bienvenue #{securityController.connectedUserid}"/></li>
@@ -47,7 +63,7 @@
              </p:dialog>
 
             <h:commandButton value="Ajoutez l episode" rendered="#{securityController.connectedUserIsAdmin}" action="#{episodeController.doCreate}">
-                <f:param name="saison_id" value="#{saisonController.saison.id}"/>
+                <f:param name="saison_id" value="#{saisonController.currentSaisonId}"/>
             </h:commandButton>
 
         </h:form>
@@ -56,5 +72,6 @@
             <h:commandButton value="Cancel" action="newSaison.xhtml"/>
         </h:form>
         <hr/>
-    </h:body>
+        </ui:define>
+    </ui:composition>
 </html>

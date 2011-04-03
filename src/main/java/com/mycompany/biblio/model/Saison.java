@@ -31,6 +31,7 @@ public class Saison implements Serializable {
     private Long id;
     @Column(nullable = false)
     private int numero;
+    private Boolean selected;
     @OneToMany
     private List<Episode> episodes;
 
@@ -78,6 +79,18 @@ public class Saison implements Serializable {
 
     public void addEpisode(Episode episode) {
         episodes.add(episode);
+    }
+
+    public Boolean isSelected() {
+        return selected;
+    }
+
+    public Boolean getSelected() {
+        return selected;
+    }
+
+    public void setSelected(Boolean selected) {
+        this.selected = selected;
     }
 
 }

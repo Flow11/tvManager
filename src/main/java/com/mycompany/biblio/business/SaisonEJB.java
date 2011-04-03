@@ -15,7 +15,6 @@ public class SaisonEJB {
     // ======================================
     @PersistenceContext(unitName = "jsfExamplePU")
     private EntityManager em;
-    private int currentSaisonId;
 
     // ======================================
     // =           Public Methods           =
