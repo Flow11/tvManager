@@ -32,7 +32,6 @@ public class Serie implements Serializable {
     private String title;
     @Column(length = 2000)
     private String description;
-    private String img;
     private double note;
     private Boolean selected;
     @OneToMany
@@ -45,7 +44,6 @@ public class Serie implements Serializable {
     public Serie(String title, String description,String img, double note, Boolean selected) {
         this.title = title;
         this.description = description;
-        this.img = img;
         this.note = note;
     }
 
@@ -89,20 +87,6 @@ public class Serie implements Serializable {
      */
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    /**
-     * @return the img
-     */
-    public String getImg() {
-        return img;
-    }
-
-    /**
-     * @param img the img to set
-     */
-    public void setImg(String img) {
-        this.img = img;
     }
 
     /**
